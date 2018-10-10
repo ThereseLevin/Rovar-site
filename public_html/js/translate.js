@@ -17,7 +17,6 @@
 // Konsonanter B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, X, Z.
 
 // 1. Array med alla konsonanter
-
 const consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'v', 'x', 'z'];
 
 // console.table(consonants);
@@ -34,22 +33,34 @@ function getFormData() {
     document.getElementById("outputtext").innerHTML = formData;
 
     //För att texten ska stanna på sidan, och inte ladda in en ny sida vid tryckning på submit.
-    event.preventDefault();
+    document.getElementById("clickButton").addEventListener("click", function(event){
+        event.preventDefault()
+    });
 
     //Return formData, så att vi kan använda variabeln globalt i koden.
     return formData;
 }
 
+console.log(getFormData());
 
-// getFormData();
-    //Kolla om formData innehåller konsonanter. 
-//kolla om formData existerar
+//lopa array för att ta ut bokstäver till siffror. ta ut siffrorna och gör till bopkastäver.
 
-// function checkData() {
-//     var n = formData.includes(consonants);
-//     document.getElementById("check").innerHTML = n;
-// }
+//for / loop genom formData för att få index nummer på bokstäverna
 
-// if (formData.includes(consonants)){
-//     document.write("KONSONANTER");
-// }
+//Skapa formdata till array
+
+//lägga in o + konsonant i det ledet vid array index nummert
+
+// Lägga till "o" och sig själv på konsunanterna i stringen. 
+
+
+//Gör variabler-strängen till en array
+// var formArray = getFormData().split();
+// console.log(formArray);
+ 
+var nameArray = getFormData().split('');
+console.log(nameArray);
+
+//gör en idx var, med arryn med namnet, och kolla index nummret med konsonanterna
+var idx = nameArray.indexOf("s");
+console.log(idx);
