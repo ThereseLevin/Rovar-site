@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/translate.js"></script>
+    <script src="js/translate.js" defer></script>
     <title>Rövarnamn</title>
 </head>
 <body>
@@ -24,10 +24,12 @@
             <form>
                 <input type="text" name="name" id="formid" value="Namn">
                 <br>
+                <!-- När knappen klickas på körs funktion getFormData-->
                 <button onclick="getFormData()">Try it</button>
             </form> 
 
             <p id="outputtext"><!-- Här kommer namnet från js --></p>
+            <p id="check"><!-- Här kommer namnet från js --></p>
         </main>
 
         <footer>
