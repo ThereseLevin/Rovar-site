@@ -62,5 +62,13 @@ var nameArray = getFormData().split('');
 console.log(nameArray);
 
 //gör en idx var, med arryn med namnet, och kolla index nummret med konsonanterna
-var idx = nameArray.indexOf("s");
+var idx = nameArray.indexOf("r");
 console.log(idx);
+
+for (var i = 0; i < nameArray.length; i++) {
+    console.log(nameArray[i].indexOf(consonants) >= 0);
+}
+
+//indexOf
+//substring?
+
