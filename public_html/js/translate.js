@@ -27,7 +27,7 @@ function getFormData() {
     let consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z'];
 
     // Skapar variablen formData. Hämtar värde från formulär
-    let formData = document.querySelector("#formid").value;
+    let formData = document.querySelector('input').value;
     
     //Hittar outputtext i dokumentet. Skriver in värdet från formData i outputtext.
     document.getElementById("outputtext").innerHTML = formData;
