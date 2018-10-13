@@ -1,15 +1,10 @@
 /* - - - - NAVBAR - - - - */
-
 nav {
-    background-color: rgba(48, 94, 54, 7);
-    position: fixed;
-
-}
+  background-color: #305e36;
+  position: fixed; }
 
 .img-fluid {
-    width: 20vw;
-}
-
+  width: 20vw; }
 
 /**
         nav {
