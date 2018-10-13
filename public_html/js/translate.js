@@ -40,11 +40,11 @@ function getFormData() {
     let newName = "";
 
     // En for-loop som ska gå genom input-namnet och dela upp ordet. (ex N,a,m,n)
-    for (formData.split('')){
-        newName = formData;
+    for (char.formData.split('')){
+        newName = char;
 
-        if(consonants.includes(getFormData())){
-            newName += "o" + formData;
+        if(consonants.includes(char.toLowerCase()){
+            newName += "o" + char;
         }
     }
 
@@ -60,9 +60,11 @@ console.log(getFormData());
 
 // KOMMENTARER OCH TESTER
 
+//char() = Converts a primitive datatype or array to a numeric character representation.
+
 //Isället för att functionen ska köras Onclick - eventlistener?
 
-//lopa array för att ta ut bokstäver till siffror. ta ut siffrorna och gör till bopkastäver.
+//loopa array för att ta ut bokstäver till siffror. ta ut siffrorna och gör till bopkastäver.
 
 //for / loop genom formData för att få index nummer på bokstäverna
 
