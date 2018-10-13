@@ -17,20 +17,18 @@
 // Konsonanter B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, X, Z.
 
 
+// Skapar funktionen getFormData som hämtar det inskrivna namnet, kollar efter konsonaterna, stoppar in 'o' på de platser där konsonanter finns och lägger sen till samma konsonant igen. Sedan skriver funktionen ut namnet i HTML dokumentet. Tar även bort default beteendet hos form/submit.
 
-//Isället för att functionen ska köras Onclick - eventlistener?
-
-
-// skapar funktionen getFormData
 function getFormData() {
 
+    //Variabel med en array med alla konsonanter som vi ska kolla efter i namnet.
     let consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z'];
 
     // Skapar variablen formData. Hämtar värde från formulär
     let formData = document.querySelector('input').value;
     
     //Hittar outputtext i dokumentet. Skriver in värdet från formData i outputtext.
-    document.getElementById("outputtext").innerHTML = formData;
+    document.getElementById("outputtext").innerHTML = newData;
 
     //För att texten ska stanna på sidan, och inte ladda in en ny sida vid tryckning på submit.
     document.getElementById("clickButton").addEventListener("click", function(event){
@@ -41,8 +39,14 @@ function getFormData() {
     //Göra en ny tom variabel där det nya namnet ska sparas 
     let newName = "";
 
+    // En for-loop som ska gå genom input-namnet och dela upp ordet. (ex N,a,m,n)
+    for (){
+        
+    }
+
     //Return formData, så att vi kan använda variabeln globalt i koden.
     return formData;
+    return newName;
 
 } 
 
@@ -51,6 +55,8 @@ console.log(getFormData());
 
 
 // KOMMENTARER OCH TESTER
+
+//Isället för att functionen ska köras Onclick - eventlistener?
 
 //lopa array för att ta ut bokstäver till siffror. ta ut siffrorna och gör till bopkastäver.
 
