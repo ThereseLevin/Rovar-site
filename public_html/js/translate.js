@@ -37,6 +37,9 @@ function getFormData() {
         event.preventDefault()
     });
     
+    
+    //Göra en ny tom variabel där det nya namnet ska sparas 
+    let newName = "";
 
     //Return formData, så att vi kan använda variabeln globalt i koden.
     return formData;
