@@ -19,12 +19,10 @@
 // 1. Array med alla konsonanter
 const consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'v', 'x', 'z'];
 
-// console.table(consonants);
-
 // 2. Hämta värde från formulär och lägg i en variabel
 
 // skapar funktionen getFormData
-function getFormData() {
+function getFormData(name) {
 
     // Skapar variablen formData. Hämtar värde från formulär
     let formData = document.querySelector("#formid").value;
@@ -55,9 +53,7 @@ console.log(getFormData());
 
 
 //Gör variabler-strängen till en array
-// var formArray = getFormData().split();
-// console.log(formArray);
- 
+
 var nameArray = getFormData().split('');
 console.log(nameArray);
 
@@ -66,9 +62,15 @@ var idx = nameArray.indexOf("r");
 console.log(idx);
 
 for (var i = 0; i < nameArray.length; i++) {
-    console.log(nameArray[i].indexOf(consonants) >= 0);
-}
+   console.log(nameArray[i].indexOf(consonants) >= 0);
+}   
 
 //indexOf
 //substring?
+//funktion för hela grejen?
+//includes?
 
+// Kolla OM namnet innahåller några consonanter
+//The toLowerCase() method converts a string to lowercase letters.
+
+let newName = '';
