@@ -7,7 +7,7 @@
 2. Hämta värdet från formuläret och stoppa i en variabel
 3. Kolla OM det finns konsonanter i strängen.
 4. OM INTE, gör ingenting med strängen.
-5. OM det finns,  lägg till "o" och sig själv, där det finns. ( t = ot, e = eo)
+5. OM det finns,  lägg till "o" och sig själv, där det finns. ( ex t = ot, e = eo)
 6. Skapa strängen i en ny variabel
 7. Skriva ut den nya variablen i dokumentet, när besökaren klickat på knappen
 
@@ -18,10 +18,13 @@
 
 
 
-// 2. Hämta värde från formulär och lägg i en variabel
+//Isället för att functionen ska köras Onclick - eventlistener?
+
 
 // skapar funktionen getFormData
 function getFormData() {
+
+    let consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z'];
 
     // Skapar variablen formData. Hämtar värde från formulär
     let formData = document.querySelector("#formid").value;
@@ -33,36 +36,18 @@ function getFormData() {
     document.getElementById("clickButton").addEventListener("click", function(event){
         event.preventDefault()
     });
+    
 
     //Return formData, så att vi kan använda variabeln globalt i koden.
     return formData;
 
 } 
 
-function test(name){
-    // 1. Array med alla konsonanter
-const consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'v', 'x', 'z'];
-
-    //varibel där det nya rövarnamnet kommer hamna 
-    let newName = '';
-
-    for (let i = 0; i< name.length; ++i){
-        let letter = name[i];
-
-        newName += letter;
-
-
-        if (consonants.includes(letter.toLowerCase())){
-            newName += 'o' + letter.toLowerCase();
-        }
-    }
-
-    return newName;
-}
-
 console.log(getFormData());
-test();
 
+
+
+// KOMMENTARER OCH TESTER
 
 //lopa array för att ta ut bokstäver till siffror. ta ut siffrorna och gör till bopkastäver.
 
@@ -73,7 +58,6 @@ test();
 //lägga in o + konsonant i det ledet vid array index nummert
 
 // Lägga till "o" och sig själv på konsunanterna i stringen. 
-
 
 //Gör variabler-strängen till en array
 
