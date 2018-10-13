@@ -40,8 +40,12 @@ function getFormData() {
     let newName = "";
 
     // En for-loop som ska gå genom input-namnet och dela upp ordet. (ex N,a,m,n)
-    for (){
-        
+    for (formData.split('')){
+        newName = formData;
+
+        if(consonants.includes(getFormData())){
+            newName += "o" + formData;
+        }
     }
 
     //Return formData, så att vi kan använda variabeln globalt i koden.
