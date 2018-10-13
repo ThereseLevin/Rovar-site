@@ -16,13 +16,12 @@
 // Vokaler A, e, i, o, u, y, å, ä och ö.
 // Konsonanter B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, X, Z.
 
-// 1. Array med alla konsonanter
-const consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'v', 'x', 'z'];
+
 
 // 2. Hämta värde från formulär och lägg i en variabel
 
 // skapar funktionen getFormData
-function getFormData(name) {
+function getFormData() {
 
     // Skapar variablen formData. Hämtar värde från formulär
     let formData = document.querySelector("#formid").value;
@@ -37,9 +36,33 @@ function getFormData(name) {
 
     //Return formData, så att vi kan använda variabeln globalt i koden.
     return formData;
+
+} 
+
+function test(name){
+    // 1. Array med alla konsonanter
+const consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'v', 'x', 'z'];
+
+    //varibel där det nya rövarnamnet kommer hamna 
+    let newName = '';
+
+    for (let i = 0; i< name.length; ++i){
+        let letter = name[i];
+
+        newName += letter;
+
+
+        if (consonants.includes(letter.toLowerCase())){
+            newName += 'o' + letter.toLowerCase();
+        }
+    }
+
+    return newName;
 }
 
 console.log(getFormData());
+test();
+
 
 //lopa array för att ta ut bokstäver till siffror. ta ut siffrorna och gör till bopkastäver.
 
@@ -54,23 +77,23 @@ console.log(getFormData());
 
 //Gör variabler-strängen till en array
 
-var nameArray = getFormData().split('');
-console.log(nameArray);
+// var nameArray = getFormData().split('');
+// console.log(nameArray);
 
 //gör en idx var, med arryn med namnet, och kolla index nummret med konsonanterna
-var idx = nameArray.indexOf("r");
-console.log(idx);
+// var idx = nameArray.indexOf("r");
+// console.log(idx);
 
-for (var i = 0; i < nameArray.length; i++) {
-   console.log(nameArray[i].indexOf(consonants) >= 0);
-}   
+// for (var i = 0; i < nameArray.length; i++) {
+//    console.log(nameArray[i].indexOf(consonants) >= 0);
+// }   
 
-//indexOf
+//indexOf     
 //substring?
 //funktion för hela grejen?
 //includes?
-
 // Kolla OM namnet innahåller några consonanter
 //The toLowerCase() method converts a string to lowercase letters.
 
-let newName = '';
+
+//for (getFormData().split('')
