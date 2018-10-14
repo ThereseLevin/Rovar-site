@@ -10,6 +10,11 @@ body {
     max-width: 1000px;
 }
 
+.wrapper-2 {
+    overflow-wrap: break-word;
+    max-width: 200px;
+}
+
 .all {
     display: grid;
     width: 100%;
@@ -46,7 +51,7 @@ body {
 
     .section-2 {
         margin: auto;
-        width: 12em;
+        width: 18em;
         background-color: $transparent;
         text-align: center;
         padding-top: $size-second;
@@ -54,9 +59,8 @@ body {
         margin-top: $size-third;
         display: flex;
         justify-content: center;
-        align-items: center;
         border-radius: 50%;
-        height: $size-main;
+        height: 8em;
     }
 
     .section-2-1 h3, p{
@@ -83,3 +87,4 @@ input[type=submit] {
     color: $quinary-color;
     margin-top: $size-third;
 }
+

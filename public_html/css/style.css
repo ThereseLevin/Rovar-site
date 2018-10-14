@@ -356,6 +356,11 @@ body {
   max-width: 1000px;
 }
 
+.wrapper-2 {
+  overflow-wrap: break-word;
+  max-width: 200px;
+}
+
 .all {
   display: grid;
   width: 100%;
@@ -390,7 +395,7 @@ body {
 }
 .all .section-2 {
   margin: auto;
-  width: 12em;
+  width: 18em;
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding-top: 3em;
@@ -402,11 +407,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-radius: 50%;
-  height: 6em;
+  height: 8em;
 }
 .all .section-2-1 h3, .all p {
   font-family: "Arial";
