@@ -351,4 +351,10 @@ body {
   background-position: center;
 }
 
+.all {
+  display: grid;
+  width: 100%;
+  margin: auto;
+}
+
 /* - - - - FOOTER - - - - */
