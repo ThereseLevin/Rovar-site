@@ -355,6 +355,7 @@ body {
   display: grid;
   width: 100%;
   margin: auto;
+  min-height: 100vh;
 }
 .all .section-1 {
   width: 90%;
