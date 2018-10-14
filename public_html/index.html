@@ -8,16 +8,21 @@
     <script src="js/translate.js" defer></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    
     <title>Rövarnamn</title>
 </head>
 <body>
     <div class="all wrapper">
         <header> 
-            <nav class="topnav" id="myTopnav">
-                    <!-- <img  class="img-fluid logo-1" src="images/logo.jpg" alt="An illustration of an squirrel and shield"> -->
-                    <ul>
-                            <li><a href="hem">Hem</a></li>
-                            <li><a href="om-rovar-spraket">Om Rövarspråket</a></li>
+            <nav class="nav-top" id="nav-drop">
+                    
+                    <ul> 
+                            <li><img  class="img-fluid" src="images/squirrel.png" alt="An illustration of an squirrel and shield"></li>
+                            <li><a href="index.html">Hem</a></li>
+                            <li><a href=".paperwall">Om Rövarspråket</a></li> 
+
+                            <li><a href="javascript:void(0)" id="hamburger-menu" onclick="navToggle()"><i class="fas fa-bars" id="ham-menu" alt="hamburger menu" ></i></a></li> 
                     </ul>
             </nav>
         </header>
@@ -83,5 +88,16 @@
         </footer>
     </div>
 
+    <script>
+		function navToggle() {
+					var x = document.getElementById("nav-drop");
+
+					if (x.className === "nav-top") {
+							x.className += "nav-drop";
+					} else {
+							x.className = "nav-top";
+					}
+			}
+		</script>
 </body>
 </html>

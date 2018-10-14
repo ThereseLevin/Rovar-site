@@ -1,1 +1,121 @@
 /* - - - - NAVBAR - - - - */
+
+
+.nav-top {
+    background-color: rgba(48, 94, 54, 0.9);
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    z-index: 100;
+   
+}
+
+
+.nav-top ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+
+
+.nav-top ul li {
+    display: inline; 
+}
+
+
+.nav-top ul li a {
+    color: $tertiary-color;
+    text-decoration: none;
+    display: none;
+    padding: 2em;
+}
+
+
+.nav-top #nav-drop ul li a {
+ display: block;
+}
+
+
+#nav-drop {
+    background-color: rgba(48, 94, 54, 0.9);
+    text-decoration: none;
+    top:0;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+
+.nav-topnav-drop img {
+    display: none;
+}
+
+
+#nav-drop ul {
+    list-style-type: none;
+    text-align: right;
+    margin-right: 2em;
+    padding-top: 1em;
+}
+
+
+#nav-drop ul li {
+    padding-bottom: 0.1em;
+    padding-top: 2em;
+}
+
+
+#nav-drop ul li a {
+    font-family: $font-second;
+text-decoration: none;
+color: $tertiary-color;
+}
+
+
+#nav-drop ul li a:hover {
+ color: $secondary-color;
+}
+
+
+.nav-top #nav-drop, #hamburger-menu, #ham-menu {
+position: absolute;
+right: 0.5em;
+top: 0.5em;
+width: 1em;
+padding-bottom: 1em;
+font-size: 1.5em;
+}
+
+
+.img-fluid {
+    width: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    float: left;
+}
+
+
+#hamburger-menu  {
+    display:block;
+}
+
+
+/*====================================================================*/
+
+
+@media screen and (min-width: 700px) {
+
+    #hamburger-menu {
+        display: none;
+    }
+
+.nav-top ul li a {
+    display: inline-block;
+}
+
+.nav-top {
+    background-color: transparent;
+}
+}
