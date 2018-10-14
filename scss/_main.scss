@@ -29,7 +29,7 @@ body {
     .section-1-2 {
         width: 90%;
         margin: auto;
-        background-color: $quinary-color;
+        background-color: $transparent;
         text-align: center;
         padding-top: $size-second;
         padding-bottom: $size-second;
@@ -38,15 +38,16 @@ body {
         h2 {
             font-family: $font-second;
         }
-        form, h3, p, input{
+        form, p, input{
             font-family: $font-third;
         }
         
     }
+
     .section-2 {
         margin: auto;
         width: 12em;
-        background-color:$quinary-color;
+        background-color: $transparent;
         text-align: center;
         padding-top: $size-second;
         padding-bottom: $size-second;
@@ -56,6 +57,10 @@ body {
         align-items: center;
         border-radius: 50%;
         height: $size-main;
+    }
+
+    .section-2-1 h3, p{
+        font-family: $font-third;
     }
 }
 

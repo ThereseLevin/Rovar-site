@@ -18,8 +18,7 @@
 
 
 // Skapar funktionen getFormData som hämtar det inskrivna namnet, kollar efter konsonaterna, stoppar in 'o' på de platser där konsonanter finns och lägger sen till samma konsonant igen. Sedan skriver funktionen ut namnet i HTML dokumentet. Tar även bort default beteendet hos form/submit. Körs vid click på button i HTML filen.
-
-function getFormData() {
+function getData(){
 
     //Variabel med en array med alla konsonanter som vi ska kolla efter i namnet.
     let consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z'];
@@ -27,27 +26,24 @@ function getFormData() {
     // Skapar variablen formData. Hämtar värde från formulär
     let formData = document.querySelector('input').value;
 
-    //Ny variabel som innehåller formData, fast som en array med "," mellan varje bokstav
-    let nameArray = formData.split('');
-    
-    //Hittar outputtext i dokumentet. Skriver in värdet från formData i outputtext.
-    document.getElementById("outputtext").innerHTML = newName;
-
-    //För att texten ska stanna på sidan, och inte ladda in en ny sida vid tryckning på submit.
-    document.getElementById("clickButton").addEventListener("click", function(event){
-        event.preventDefault()
-    });
+    // //För att texten ska stanna på sidan, och inte ladda in en ny sida vid tryckning på submit.
+    // document.getElementById("clickButton").addEventListener("click", function(event){
+    //     event.preventDefault()
+    // }, false);
     
     //Gör en ny tom variabel där det nya namnet ska sparas 
-    let newName = "";
-    char(nameArray);
+    let newName = '';
+
+    //Ny variabel som innehåller formData, fast som en array med "," mellan varje bokstav
+    let nameArray = formData.split('');
+
     // En for of-loop som ska gå genom input-namnet och dela upp ordet. (ex N,a,m,n)
     //char() = Converts a primitive datatype or array to a numeric character representation.
     //The for...of statement creates a loop iterating over iterable objects
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
-    for (char of nameArray){
+    for ( char of nameArray) {
         //gör en idx var, med arryn med namnet, och kolla index nummret med konsonanterna
-        var idx = nameArray.indexOf(consonants);
+        let idx = nameArray.indexOf(consonants);
         let characterNumber = char;
         //Gör stringen i variabeln till små bokstäver
         characterNumber.toLowerCase();
@@ -55,17 +51,18 @@ function getFormData() {
         newName += characterNumber;
         //Kolla nu OM någor från arrayn consonants finns i characterNumber
         /* OCH OM det finns, lägg till i newName + "o" och char, men här vill vi att det ska börja med stor bokstav igen, för om namnet börjar med stor bokstav, vill vi att den ska göra det två gånger */
-        if (consonants.includes(characterNumber.toLowerCase())) {
+        if ( consonants.includes(characterNumber.toLowerCase())) {
             newName += "o" + characterNumber;
         }
+        
     }
+//Hittar outputtext i dokumentet. Skriver in värdet från formData i outputtext.
+document.querySelector('#outputtext').innerHTML = newName;
 
-    //Return formData, så att vi kan använda variabeln globalt i koden.
-    return formData;
-    return newName;
-
-} 
-
+event.preventDefault();
+return formData;
+return newName;
+};
 
 // KOMMENTARER OCH TESTER
 
