@@ -8,6 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css?family=Didact+Gothic|Lobster+Two");
+@import url("https://fonts.googleapis.com/css?family=Acme");
 html {
   line-height: 1.15;
   /* 1 */
@@ -376,7 +377,7 @@ body {
   font-family: "Lobster Two", cursive, serif;
   font-size: 4.5em;
   text-shadow: 2px 2px #000000;
-  color: #FFFFFF;
+  color: #CE9A3A;
 }
 .all .section-1-2 {
   width: 90%;
@@ -391,7 +392,10 @@ body {
   font-family: "Didact Gothic", sans-serif;
 }
 .all .section-1-2 form, .all .section-1-2 p, .all .section-1-2 input {
-  font-family: "Arial";
+  font-family: "Acme", sans-serif;
+}
+.all h3 {
+  font-family: "Acme", sans-serif;
 }
 .all .section-2 {
   margin: auto;
@@ -409,9 +413,10 @@ body {
           justify-content: center;
   border-radius: 50%;
   height: 8em;
+  margin-bottom: 3em;
 }
 .all .section-2-1 h3, .all p {
-  font-family: "Arial";
+  font-family: "Acme", sans-serif;
 }
 
 input[type=text] {
@@ -433,7 +438,56 @@ input[type=submit] {
   margin-top: 1.5em;
 }
 
+.paperwall {
+  background-color: #CE9A3A;
+  margin: auto;
+  height: auto;
+  width: 100vw;
+}
+.paperwall .text-paperwall {
+  width: 80%;
+  margin: auto;
+  padding-top: 1em;
+}
+.paperwall .text-paperwall h2 {
+  font-family: "Didact Gothic", sans-serif;
+}
+
+.grid-item h2, .grid-item h3 {
+  text-align: center;
+}
+.grid-item p {
+  text-align: left;
+}
+
+#treasure {
+  text-align: center;
+}
+#treasure img {
+  width: 10em;
+}
+
 /* - - - - FOOTER - - - - */
+footer {
+  background-color: #305E36;
+  color: #FFFFFF;
+  font-family: "Acme", sans-serif;
+  width: 100%;
+  height: 10em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer i {
+  padding-left: 0.5em;
+}
+
 @media only screen and (min-width: 700px) {
   .all .section-1 {
     width: 60%;

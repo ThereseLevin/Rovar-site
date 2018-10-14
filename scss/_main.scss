@@ -28,7 +28,7 @@ body {
             font-family: $font-main;
             font-size: $size-main-2;
             text-shadow: $shadow;
-            color: $quinary-color;
+            color: $tertiary-color;
         }
     }
     .section-1-2 {
@@ -49,6 +49,10 @@ body {
         
     }
 
+    h3 {
+        font-family: $font-third;
+    }
+
     .section-2 {
         margin: auto;
         width: 18em;
@@ -61,6 +65,7 @@ body {
         justify-content: center;
         border-radius: 50%;
         height: 8em;
+        margin-bottom: $size-second;
     }
 
     .section-2-1 h3, p{
@@ -88,3 +93,36 @@ input[type=submit] {
     margin-top: $size-third;
 }
 
+
+.paperwall {
+    background-color: #CE9A3A;
+    margin: auto;
+    height: auto;
+    width: 100vw;
+
+    .text-paperwall {
+        width: 80%;
+        margin: auto;
+        padding-top: 1em;
+       h2 {
+           font-family: $font-second;
+       }
+    }
+}
+
+    .grid-item {
+
+    h2, h3 {
+        text-align: center;
+    }
+
+    p {
+        text-align: left;
+    }
+}
+#treasure {
+    text-align: center;
+    img {
+        width: 10em;
+    }
+}
