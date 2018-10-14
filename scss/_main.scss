@@ -1,1 +1,85 @@
 /* - - - - MAIN - - - - */
+body {
+    background-image: url("../media/images/forest.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper {
+    max-width: 1000px;
+}
+
+.all {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+    .section-1 {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        h1 {
+            font-family: $font-main;
+            font-size: $size-main-2;
+            text-shadow: $shadow;
+            color: $quinary-color;
+        }
+    }
+    .section-1-2 {
+        width: 90%;
+        margin: auto;
+        background-color: $transparent;
+        text-align: center;
+        padding-top: $size-second;
+        padding-bottom: $size-second;
+        margin-top: $size-third;
+        
+        h2 {
+            font-family: $font-second;
+        }
+        form, p, input{
+            font-family: $font-third;
+        }
+        
+    }
+
+    .section-2 {
+        margin: auto;
+        width: 12em;
+        background-color: $transparent;
+        text-align: center;
+        padding-top: $size-second;
+        padding-bottom: $size-second;
+        margin-top: $size-third;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        height: $size-main;
+    }
+
+    .section-2-1 h3, p{
+        font-family: $font-third;
+    }
+}
+
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=submit]:hover {
+    background-color: $tertiary-color;
+}
+
+input[type=submit] {
+    padding: 10px 15px; 
+    background-color: $primary-color; 
+    cursor: pointer;
+    border-radius: 5px; 
+    color: $quinary-color;
+    margin-top: $size-third;
+}
