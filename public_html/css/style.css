@@ -355,18 +355,26 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-size: cover;
+  margin: auto;
+  height: 160vh;
+  width: 80%;
 }
 .paperwall .text-paperwall {
   width: 50%;
   margin: auto;
+  padding: 2em;
+}
+.paperwall .text-paperwall img {
+  width: 20em;
+  margin: auto;
 }
 
-grid-item h1 {
+grid-item h2, grid-item h3 {
   text-align: center;
 }
-grid-item h2 p {
+grid-item p {
   text-align: left;
-  padding: 1em;
 }
 
 /* - - - - FOOTER - - - - */

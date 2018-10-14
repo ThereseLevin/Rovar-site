@@ -6,21 +6,29 @@
     background-position: center;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    margin: auto;
+    height: 160vh;
+    width: 80%;
 
     .text-paperwall {
         width: 50%;
         margin: auto;
+        padding: 2em;
+        img {
+            width: 20em;
+            margin: auto;
+        }
     }
 }
 
     grid-item {
 
-    h1 {
+    h2, h3 {
         text-align: center;
     }
 
-    h2 p {
+    p {
         text-align: left;
-        padding: 1em;
     }
 }
