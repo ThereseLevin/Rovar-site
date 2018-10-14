@@ -405,4 +405,23 @@ body {
           align-items: center;
 }
 
+input[type=text] {
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type=submit]:hover {
+  background-color: #CE9A3A;
+}
+
+input[type=submit] {
+  padding: 10px 15px;
+  background-color: #305E36;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #FFFFFF;
+  margin-top: 1.5em;
+}
+
 /* - - - - FOOTER - - - - */

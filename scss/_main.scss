@@ -55,3 +55,22 @@ body {
     }
 }
 
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=submit]:hover {
+    background-color: $tertiary-color;
+}
+
+input[type=submit] {
+    padding: 10px 15px; 
+    background-color: $primary-color; 
+    cursor: pointer;
+    border-radius: 5px; 
+    color: $quinary-color;
+    margin-top: $size-third;
+}
