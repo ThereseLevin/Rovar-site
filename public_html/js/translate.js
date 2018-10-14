@@ -32,7 +32,7 @@ function getFormData() {
     console.log(nameArray);
     
     //Hittar outputtext i dokumentet. Skriver in värdet från formData i outputtext.
-    document.getElementById("outputtext").innerHTML = newData;
+    document.getElementById("outputtext").innerHTML = newName;
 
     //För att texten ska stanna på sidan, och inte ladda in en ny sida vid tryckning på submit.
     document.getElementById("clickButton").addEventListener("click", function(event){
@@ -42,16 +42,16 @@ function getFormData() {
     //Gör en ny tom variabel där det nya namnet ska sparas 
     let newName = "";
 
+
     // En for of-loop som ska gå genom input-namnet och dela upp ordet. (ex N,a,m,n)
+    //char() = Converts a primitive datatype or array to a numeric character representation.
+    //The for...of statement creates a loop iterating over iterable objects
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
-    for (char of nameArray){
+    for (let value of nameArray){
+        //gör en idx var, med arryn med namnet, och kolla index nummret med konsonanterna
+        var idx = nameArray.indexOf(consonants);
         newName = char;
-
-        if(consonants.includes(char.toLowerCase()){
-            newName += "o" + char;
-        }
-
-        break;
+        char.toLowerCase();
     }
 
     //Return formData, så att vi kan använda variabeln globalt i koden.
