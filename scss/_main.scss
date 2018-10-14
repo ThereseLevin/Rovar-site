@@ -1,4 +1,5 @@
 /* - - - - MAIN - - - - */
+
 body {
     background-image: url("../media/images/forest.jpeg");
     background-attachment: fixed;
@@ -109,7 +110,7 @@ button {
     }
 }
 
-    .grid-item {
+.grid-item {
 
     h2, h3 {
         text-align: center;
@@ -119,6 +120,7 @@ button {
         text-align: left;
     }
 }
+
 #treasure {
     text-align: center;
     img {

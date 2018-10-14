@@ -16,23 +16,17 @@
 // Vokaler A, e, i, o, u, y, å, ä och ö.
 // Konsonanter B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, X, Z.
 
+//Gör en ny tom variabel där det nya namnet ska sparas 
+let newName = '';
+//Variabel med en array med alla konsonanter som vi ska kolla efter i namnet.
+const consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z'];
 
 // Skapar funktionen getFormData som hämtar det inskrivna namnet, kollar efter konsonaterna, stoppar in 'o' på de platser där konsonanter finns och lägger sen till samma konsonant igen. Sedan skriver funktionen ut namnet i HTML dokumentet. Tar även bort default beteendet hos form/submit. Körs vid click på button i HTML filen.
-function getData(){
+function getFormData(){
 
-    //Variabel med en array med alla konsonanter som vi ska kolla efter i namnet.
-    let consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z'];
 
     // Skapar variablen formData. Hämtar värde från formulär
     let formData = document.querySelector('input').value;
-
-    // //För att texten ska stanna på sidan, och inte ladda in en ny sida vid tryckning på submit.
-    // document.getElementById("clickButton").addEventListener("click", function(event){
-    //     event.preventDefault()
-    // }, false);
-    
-    //Gör en ny tom variabel där det nya namnet ska sparas 
-    let newName = '';
 
     //Ny variabel som innehåller formData, fast som en array med "," mellan varje bokstav
     let nameArray = formData.split('');
@@ -54,7 +48,6 @@ function getData(){
         if ( consonants.includes(characterNumber.toLowerCase())) {
             newName += "o" + characterNumber;
         }
-        
     }
 //Hittar outputtext i dokumentet. Skriver in värdet från formData i outputtext.
 document.querySelector('#outputtext').innerHTML = newName;
@@ -64,7 +57,13 @@ return formData;
 return newName;
 };
 
+
 // KOMMENTARER OCH TESTER
+
+ // //För att texten ska stanna på sidan, och inte ladda in en ny sida vid tryckning på submit.
+    // document.getElementById("clickButton").addEventListener("click", function(event){
+    //     event.preventDefault()
+    // }, false);
 
 //char() = Converts a primitive datatype or array to a numeric character representation.
 

@@ -34,7 +34,7 @@
 
 
 .nav-top #nav-drop ul li a {
- display: block;
+    display: block;
 }
 
 
@@ -69,23 +69,23 @@
 
 #nav-drop ul li a {
     font-family: $font-second;
-text-decoration: none;
-color: $tertiary-color;
+    text-decoration: none;
+    color: $tertiary-color;
 }
 
 
 #nav-drop ul li a:hover {
- color: $secondary-color;
+    color: $secondary-color;
 }
 
 
 .nav-top #nav-drop, #hamburger-menu, #ham-menu {
-position: absolute;
-right: 0.5em;
-top: 0.5em;
-width: 1em;
-padding-bottom: 1em;
-font-size: 1.5em;
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    width: 1em;
+    padding-bottom: 1em;
+    font-size: 1.5em;
 }
 
 
@@ -99,23 +99,4 @@ font-size: 1.5em;
 
 #hamburger-menu  {
     display:block;
-}
-
-
-/*====================================================================*/
-
-
-@media screen and (min-width: 700px) {
-
-    #hamburger-menu {
-        display: none;
-    }
-
-.nav-top ul li a {
-    display: inline-block;
-}
-
-.nav-top {
-    background-color: transparent;
-}
 }
