@@ -1,60 +1,117 @@
 /* - - - - NAVBAR - - - - */
 
 
-nav {
+.nav-top {
     background-color: rgba(48, 94, 54, 0.7);
-    color: $primary-color;
-    font-family: $font-main;
     position: fixed;
     top: 0;
-    left: 0;
+    left:0;
     width: 100%;
     z-index: 100;
    
 }
 
 
-ul {
+.nav-top ul {
     margin: 0;
+    list-style: none;
+    padding: 0;
 }
 
-li {
-    padding: 3em;
-    display: inline;
-    padding: 4em;
-    
+
+
+.nav-top ul li {
+    display: inline; 
 }
 
-a {
+.nav-top ul li a {
     color: $tertiary-color;
     text-decoration: none;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
+    display: none;
     padding: 2em;
 
 }
 
-a:hover {
-background-color: $primary-color;
+.nav-top #nav-drop ul li a {
+ display: block;
 }
 
-.img-fluid {
-    width: 20vw;
+
+#nav-drop {
+    background-color: $primary-color;
+    text-decoration: none;
+    top:0;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+.nav-topnav-drop img {
+    display: none;
+}
+
+#nav-drop ul {
+    list-style-type: none;
+    text-align: right;
+    margin-right: 2em;
+    padding-top: 1em;
+}
+
+#nav-drop ul li {
+    padding-bottom: 0.1em;
     padding-top: 2em;
 }
 
-/*==========================  ID =============================*/
+#nav-drop ul li a {
+    font-family: $font-second;
+text-decoration: none;
+color: $tertiary-color;
 
-#nav-img {
-    width: 4em;
+}
+
+#nav-drop ul li a:hover {
+ color: $secondary-color;
+}
+
+.nav-top #nav-drop, #hamburger-menu, #ham-menu {
+position: absolute;
+right: 0.5em;
+top: 0.5em;
+width: 1em;
+padding-bottom: 1em;
+font-size: 1.5em;
+}
+
+
+.img-fluid {
+    width: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    float: left;
 }
 
 
 
+/*==========================  ID =============================*/
 
+#hamburger-menu  {
+    display:block;
+}
 
+@media screen and (min-width: 700px) {
 
+    #hamburger-menu {
+        display: none;
+    }
+
+.nav-top ul li a {
+    display: inline-block;
+}
+
+.nav-top {
+    background-color: transparent;
+}
+}
 
 
 

@@ -12,12 +12,14 @@
 <body>
     <div class="all">
         <header> 
-            <nav class="topnav" id="myTopnav">
-                    <img  class="img-fluid" src="images/squirrel.png" alt="An illustration of an squirrel and shield">
-                    <ul>
+            <nav class="nav-top" id="nav-drop">
+                    
+                    <ul> 
+                        <li><img  class="img-fluid" src="images/squirrel.png" alt="An illustration of an squirrel and shield"></li>
                             <li><a href="hem">Hem</a></li>
                             <li><a href="om-rovar-spraket">Om Rövarspråket</a></li> 
-                            <li><a href="javascript:void(0)" id="hamburger-menu" onclick="navToggle()"><i class="fas fa-bars" id="nav-img" alt="hamburger menu" ></i></a></li>
+
+                            <li><a href="javascript:void(0)" id="hamburger-menu" onclick="navToggle()"><i class="fas fa-bars" id="ham-menu" alt="hamburger menu" ></i></a></li> 
                     </ul>
             </nav>
         </header>
@@ -33,10 +35,10 @@
 		function navToggle() {
 					var x = document.getElementById("nav-drop");
 
-					if (x.className === "myTopnav") {
-							x.className += "drop";
+					if (x.className === "nav-top") {
+							x.className += "nav-drop";
 					} else {
-							x.className = "myTopnav";
+							x.className = "nav-top";
 					}
 			}
 		</script>
