@@ -7,12 +7,12 @@ body {
 }
 
 .wrapper {
-    max-width: 1000px;
+    max-width: 600px;
 }
 
 .wrapper-2 {
     overflow-wrap: break-word;
-    max-width: 500px;
+    max-width: 300px;
 }
 
 .all {
@@ -23,6 +23,7 @@ body {
     .section-1 {
         width: 90%;
         margin: auto;
+        margin-top: 8em;
         text-align: center;
         h1 {
             font-family: $font-main;
@@ -36,8 +37,8 @@ body {
         margin: auto;
         background-color: $transparent;
         text-align: center;
-        padding-top: $size-second;
-        padding-bottom: $size-second;
+        padding-top: $size-third;
+        padding-bottom: $size-third;
         margin-top: $size-third;
         
         h2 {
@@ -50,12 +51,13 @@ body {
     }
 
     h3 {
-        font-family: $font-third;
+        font-family: $font-second;
     }
 
     .section-2 {
         margin: auto;
-        width: 80%;
+        width: 20em;
+        border-radius: 50%;
         background-color: $transparent;
         text-align: center;
         padding-top: $size-second;
@@ -63,9 +65,10 @@ body {
         margin-top: $size-third;
         display: flex;
         justify-content: center;
-        border-radius: 50%;
-        height: 8em;
+        align-items: center;
+        height: 10em;
         margin-bottom: $size-second;
+        margin-top: $size-second;
     }
 
     .section-2-1 h3, p{
@@ -120,6 +123,7 @@ button {
     text-align: center;
     img {
         width: 10em;
+        margin-bottom: 2em;
     }
 }
 button:hover {
@@ -130,6 +134,12 @@ button:hover {
 #outputtext {
     font-family: $font-main;
     color: $tertiary-color;
-    font-size: $size-second;
+    font-size: $size-third;
+}
+
+#source {
+    text-decoration: none;
+    color: $primary-color;
+    font-family: $font-third;
 }
 
