@@ -12,7 +12,7 @@ body {
 
 .wrapper-2 {
     overflow-wrap: break-word;
-    max-width: 200px;
+    max-width: 500px;
 }
 
 .all {
@@ -55,7 +55,7 @@ body {
 
     .section-2 {
         margin: auto;
-        width: 18em;
+        width: 80%;
         background-color: $transparent;
         text-align: center;
         padding-top: $size-second;
@@ -76,15 +76,11 @@ body {
 input[type=text] {
     padding:5px; 
     border:2px solid #ccc; 
-    -webkit-border-radius: 5px;
     border-radius: 5px;
 }
 
-input[type=submit]:hover {
-    background-color: $tertiary-color;
-}
 
-input[type=submit] {
+button {
     padding: 10px 15px; 
     background-color: $primary-color; 
     cursor: pointer;
@@ -126,3 +122,14 @@ input[type=submit] {
         width: 10em;
     }
 }
+button:hover {
+    background-color: $tertiary-color;
+
+}
+
+#outputtext {
+    font-family: $font-main;
+    color: $tertiary-color;
+    font-size: $size-second;
+}
+
