@@ -8,22 +8,46 @@
 /* - - - - NAVBAR - - - - */
 nav {
   background-color: rgba(48, 94, 54, 0.7);
-  color: #CE9A3A;
+  color: #305e36;
   font-family: "Lobster Two", cursive, serif;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 100; }
-
-body {
-  background-color: rgb(255, 255, 255); }
 
 ul {
   margin: 0; }
 
 li {
+  padding: 3em;
+  display: inline;
+  padding: 4em; }
+
+a {
+  color: #CE9A3A;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 2em; }
 
+a:hover {
+  background-color: #305e36; }
+
 .img-fluid {
-  width: 5em; }
+  width: 20vw;
+  padding-top: 2em; }
+
+/*==========================  ID =============================*/
+#nav-img {
+  width: 4em; }
 
 /**
         nav {
@@ -67,3 +91,4 @@ li {
           }
         </script>
         */
+/* - - - - MAIN - - - - */

@@ -1,28 +1,53 @@
 /* - - - - NAVBAR - - - - */
 
+
 nav {
     background-color: rgba(48, 94, 54, 0.7);
-    color: $tertiary-color;
+    color: $primary-color;
     font-family: $font-main;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
-
+   
 }
 
-body {
-    background-color: darkblue;
-}
 
 ul {
     margin: 0;
 }
 
 li {
+    padding: 3em;
+    display: inline;
+    padding: 4em;
+    
+}
+
+a {
+    color: $tertiary-color;
+    text-decoration: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
     padding: 2em;
+
+}
+
+a:hover {
+background-color: $primary-color;
 }
 
 .img-fluid {
-    width: 5em;
+    width: 20vw;
+    padding-top: 2em;
+}
+
+/*==========================  ID =============================*/
+
+#nav-img {
+    width: 4em;
 }
 
 
