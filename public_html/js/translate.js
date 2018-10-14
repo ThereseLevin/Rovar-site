@@ -26,6 +26,10 @@ function getFormData() {
 
     // Skapar variablen formData. Hämtar värde från formulär
     let formData = document.querySelector('input').value;
+
+    //Ny variabel som innehåller formData, fast som en array med "," mellan varje bokstav
+    let nameArray = formData.split('');
+    console.log(nameArray);
     
     //Hittar outputtext i dokumentet. Skriver in värdet från formData i outputtext.
     document.getElementById("outputtext").innerHTML = newData;
@@ -35,18 +39,17 @@ function getFormData() {
         event.preventDefault()
     });
     
-    
-    //Göra en ny tom variabel där det nya namnet ska sparas 
+    //Gör en ny tom variabel där det nya namnet ska sparas 
     let newName = "";
 
-    // En for-loop som ska gå genom input-namnet och dela upp ordet. (ex N,a,m,n)
-    for (char.formData.split('')){
-        newName = char;
+    // // En for-loop som ska gå genom input-namnet och dela upp ordet. (ex N,a,m,n)
+    // for (char.formData.split('')){
+    //     newName = char;
 
-        if(consonants.includes(char.toLowerCase()){
-            newName += "o" + char;
-        }
-    }
+    //     if(consonants.includes(char.toLowerCase()){
+    //         newName += "o" + char;
+    //     }
+    // }
 
     //Return formData, så att vi kan använda variabeln globalt i koden.
     return formData;
@@ -93,6 +96,4 @@ console.log(getFormData());
 //includes?
 // Kolla OM namnet innahåller några consonanter
 //The toLowerCase() method converts a string to lowercase letters.
-
-
 //for (getFormData().split('')
