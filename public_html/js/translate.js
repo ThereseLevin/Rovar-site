@@ -50,8 +50,18 @@ function getFormData() {
     for (let value of nameArray){
         //gör en idx var, med arryn med namnet, och kolla index nummret med konsonanterna
         var idx = nameArray.indexOf(consonants);
-        newName = char;
-        char.toLowerCase();
+        let characterNumber = char;
+        //Gör stringen i variabeln till små bokstäver
+        characterNumber.toLowerCase();
+        // Lägg till det nya namnet i den tomma variabeln
+        newName = characterNumber;
+    }
+
+    //Kolla nu OM någor från arrayn consonants finns i characterNumber
+    /* OCH OM det finns, lägg till i newName + "o" och char, men här vill vi att det ska börja med stor bokstav igen, för om namnet börjar med stor bokstav, vill vi att den ska göra det två gånger */
+
+    if (consonants.includes(characterNumber.toLowerCase())) {
+        newName += "o" + characterNumber;
     }
 
     //Return formData, så att vi kan använda variabeln globalt i koden.
