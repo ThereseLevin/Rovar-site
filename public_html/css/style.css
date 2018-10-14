@@ -363,6 +363,15 @@ body {
   background-color: #FFFFFF;
   text-align: center;
 }
+.all .section-1 h1 {
+  font-family: "Lobster Two", cursive, serif;
+}
+.all .section-1 h2 {
+  font-family: "Didact Gothic", sans-serif;
+}
+.all .section-1 form, .all .section-1 h3, .all .section-1 p, .all .section-1 input {
+  font-family: "Arial";
+}
 .all .section-2 {
   width: 90%;
   margin: auto;

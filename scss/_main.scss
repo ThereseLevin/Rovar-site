@@ -16,6 +16,16 @@ body {
         margin: auto;
         background-color: $quinary-color;
         text-align: center;
+        h1 {
+            font-family: $font-main;
+        }
+        h2 {
+            font-family: $font-second;
+        }
+        form, h3, p, input{
+            font-family: $font-third;
+        }
+        
     }
     .section-2 {
         width: 90%;
