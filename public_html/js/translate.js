@@ -29,7 +29,6 @@ function getFormData() {
 
     //Ny variabel som innehåller formData, fast som en array med "," mellan varje bokstav
     let nameArray = formData.split('');
-    console.log(nameArray);
     
     //Hittar outputtext i dokumentet. Skriver in värdet från formData i outputtext.
     document.getElementById("outputtext").innerHTML = newName;
@@ -41,27 +40,24 @@ function getFormData() {
     
     //Gör en ny tom variabel där det nya namnet ska sparas 
     let newName = "";
-
-
+    char(nameArray);
     // En for of-loop som ska gå genom input-namnet och dela upp ordet. (ex N,a,m,n)
     //char() = Converts a primitive datatype or array to a numeric character representation.
     //The for...of statement creates a loop iterating over iterable objects
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
-    for (let value of nameArray){
+    for (char of nameArray){
         //gör en idx var, med arryn med namnet, och kolla index nummret med konsonanterna
         var idx = nameArray.indexOf(consonants);
         let characterNumber = char;
         //Gör stringen i variabeln till små bokstäver
         characterNumber.toLowerCase();
         // Lägg till det nya namnet i den tomma variabeln
-        newName = characterNumber;
-    }
-
-    //Kolla nu OM någor från arrayn consonants finns i characterNumber
-    /* OCH OM det finns, lägg till i newName + "o" och char, men här vill vi att det ska börja med stor bokstav igen, för om namnet börjar med stor bokstav, vill vi att den ska göra det två gånger */
-
-    if (consonants.includes(characterNumber.toLowerCase())) {
-        newName += "o" + characterNumber;
+        newName += characterNumber;
+        //Kolla nu OM någor från arrayn consonants finns i characterNumber
+        /* OCH OM det finns, lägg till i newName + "o" och char, men här vill vi att det ska börja med stor bokstav igen, för om namnet börjar med stor bokstav, vill vi att den ska göra det två gånger */
+        if (consonants.includes(characterNumber.toLowerCase())) {
+            newName += "o" + characterNumber;
+        }
     }
 
     //Return formData, så att vi kan använda variabeln globalt i koden.
@@ -69,9 +65,6 @@ function getFormData() {
     return newName;
 
 } 
-
-console.log(getFormData());
-
 
 
 // KOMMENTARER OCH TESTER
