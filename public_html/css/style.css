@@ -346,35 +346,29 @@ template {
 /* - - - - NAVBAR - - - - */
 /* - - - - MAIN - - - - */
 .paperwall {
-  background-image: url("../images/antique.paper.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-size: cover;
+  background-color: #CE9A3A;
   margin: auto;
-  height: 160vh;
-  width: 80%;
+  height: auto;
+  width: 100vw;
 }
 .paperwall .text-paperwall {
-  width: 50%;
+  width: 80%;
   margin: auto;
-  padding: 2em;
-}
-.paperwall .text-paperwall img {
-  width: 20em;
-  margin: auto;
+  padding-top: 1em;
 }
 
-grid-item h2, grid-item h3 {
+.grid-item h2, .grid-item h3 {
   text-align: center;
 }
-grid-item p {
+.grid-item p {
   text-align: left;
+}
+
+#treasure {
+  text-align: center;
+}
+#treasure img {
+  width: 10em;
 }
 
 /* - - - - FOOTER - - - - */

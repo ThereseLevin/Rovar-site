@@ -1,28 +1,25 @@
 /* - - - - MAIN - - - - */
 
+.container {
+  
+
+}
+
 .paperwall {
-    background-image: url("../images/antique.paper.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
+    background-color: #CE9A3A;
     margin: auto;
-    height: 160vh;
-    width: 80%;
+    height: auto;
+    width: 100vw;
 
     .text-paperwall {
-        width: 50%;
+        width: 80%;
         margin: auto;
-        padding: 2em;
-        img {
-            width: 20em;
-            margin: auto;
-        }
+        padding-top: 1em;
+       
     }
 }
 
-    grid-item {
+    .grid-item {
 
     h2, h3 {
         text-align: center;
@@ -30,5 +27,11 @@
 
     p {
         text-align: left;
+    }
+}
+#treasure {
+    text-align: center;
+    img {
+        width: 10em;
     }
 }
