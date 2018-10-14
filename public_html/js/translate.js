@@ -17,7 +17,7 @@
 // Konsonanter B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, X, Z.
 
 
-// Skapar funktionen getFormData som hämtar det inskrivna namnet, kollar efter konsonaterna, stoppar in 'o' på de platser där konsonanter finns och lägger sen till samma konsonant igen. Sedan skriver funktionen ut namnet i HTML dokumentet. Tar även bort default beteendet hos form/submit.
+// Skapar funktionen getFormData som hämtar det inskrivna namnet, kollar efter konsonaterna, stoppar in 'o' på de platser där konsonanter finns och lägger sen till samma konsonant igen. Sedan skriver funktionen ut namnet i HTML dokumentet. Tar även bort default beteendet hos form/submit. Körs vid click på button i HTML filen.
 
 function getFormData() {
 
@@ -42,14 +42,17 @@ function getFormData() {
     //Gör en ny tom variabel där det nya namnet ska sparas 
     let newName = "";
 
-    // // En for-loop som ska gå genom input-namnet och dela upp ordet. (ex N,a,m,n)
-    // for (char.formData.split('')){
-    //     newName = char;
+    // En for of-loop som ska gå genom input-namnet och dela upp ordet. (ex N,a,m,n)
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+    for (char of nameArray){
+        newName = char;
 
-    //     if(consonants.includes(char.toLowerCase()){
-    //         newName += "o" + char;
-    //     }
-    // }
+        if(consonants.includes(char.toLowerCase()){
+            newName += "o" + char;
+        }
+
+        break;
+    }
 
     //Return formData, så att vi kan använda variabeln globalt i koden.
     return formData;
