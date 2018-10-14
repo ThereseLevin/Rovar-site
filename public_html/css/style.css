@@ -1,1 +1,69 @@
 /* - - - - MASTER - - - - */
+@import url("https://fonts.googleapis.com/css?family=Didact+Gothic|Lobster+Two");
+/* - - - - VARIABLES - - - - */
+/* COLORS */
+/* FONTS */
+/* Font family */
+/* Font sizes */
+/* - - - - NAVBAR - - - - */
+nav {
+  background-color: rgba(48, 94, 54, 0.7);
+  color: #CE9A3A;
+  font-family: "Lobster Two", cursive, serif;
+  position: fixed;
+  z-index: 100; }
+
+body {
+  background-color: rgb(255, 255, 255); }
+
+ul {
+  margin: 0; }
+
+li {
+  padding: 2em; }
+
+.img-fluid {
+  width: 5em; }
+
+/**
+        nav {
+            background-color: $quaternary-color;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            li {
+                display: inline;
+                a {
+                display: inline-block;
+                padding: 1em;
+                color: $primary-color;
+                text-decoration: none;
+                } & :hover {
+                background-color: $senary-color;
+                }
+            }
+            }
+        }
+
+
+
+        <script>
+        function navToggle() {
+              var x = document.getElementById("nav-drop");
+    
+              if (x.className === "nav-top") {
+                  x.className += " drop";
+              } else {
+                  x.className = "nav-top";
+              }
+          }
+        </script>
+        */
