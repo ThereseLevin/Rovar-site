@@ -6,6 +6,10 @@ body {
     background-position: center;
 }
 
+.wrapper {
+    max-width: 1000px;
+}
+
 .all {
     display: grid;
     width: 100%;
@@ -17,7 +21,7 @@ body {
         text-align: center;
         h1 {
             font-family: $font-main;
-            font-size: $size-second;
+            font-size: $size-main-2;
             text-shadow: $shadow;
             color: $quinary-color;
         }
@@ -41,9 +45,7 @@ body {
     }
     .section-2 {
         margin: auto;
-        width: 50%;
-        height: 20%;
-        border-radius: 50%;
+        width: 12em;
         background-color:$quinary-color;
         text-align: center;
         padding-top: $size-second;
@@ -52,6 +54,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 50%;
+        height: $size-main;
     }
 }
 
