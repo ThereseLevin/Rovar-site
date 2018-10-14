@@ -345,6 +345,30 @@ template {
 /* Font sizes */
 /* - - - - NAVBAR - - - - */
 /* - - - - MAIN - - - - */
+.paperwall {
+  background-image: url("../images/antique.paper.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.paperwall .text-paperwall {
+  width: 50%;
+  margin: auto;
+}
+
+grid-item h1 {
+  text-align: center;
+}
+grid-item h2 p {
+  text-align: left;
+  padding: 1em;
+}
+
 /* - - - - FOOTER - - - - */
 footer {
   background-color: #305E36;

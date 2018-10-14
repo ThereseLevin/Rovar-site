@@ -1,1 +1,26 @@
 /* - - - - MAIN - - - - */
+
+.paperwall {
+    background-image: url("../images/antique.paper.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+
+    .text-paperwall {
+        width: 50%;
+        margin: auto;
+    }
+}
+
+    grid-item {
+
+    h1 {
+        text-align: center;
+    }
+
+    h2 p {
+        text-align: left;
+        padding: 1em;
+    }
+}
