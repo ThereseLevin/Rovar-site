@@ -15,7 +15,10 @@ $font-main: 'Lobster Two', cursive, serif;
 $font-second: 'Didact Gothic', sans-serif;
 $font-third: 'Arial';
 
-/* Font sizes */
-$font-size-main: 6em;
-$font-size-second: 2em;
-$font-size-third: 1em;
+/* Sizes */
+$size-main: 6em;
+$size-second: 3em;
+$size-third: 1.5em;
+
+/* Shadow */
+$shadow: 2px 2px $quaternary-color;

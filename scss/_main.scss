@@ -14,11 +14,23 @@ body {
     .section-1 {
         width: 90%;
         margin: auto;
-        background-color: $quinary-color;
         text-align: center;
         h1 {
             font-family: $font-main;
+            font-size: $size-second;
+            text-shadow: $shadow;
+            color: $quinary-color;
         }
+    }
+    .section-1-2 {
+        width: 90%;
+        margin: auto;
+        background-color: $quinary-color;
+        text-align: center;
+        padding-top: $size-second;
+        padding-bottom: $size-second;
+        margin-top: $size-third;
+        
         h2 {
             font-family: $font-second;
         }
@@ -28,10 +40,18 @@ body {
         
     }
     .section-2 {
-        width: 90%;
         margin: auto;
+        width: 50%;
+        height: 20%;
+        border-radius: 50%;
         background-color:$quinary-color;
         text-align: center;
+        padding-top: $size-second;
+        padding-bottom: $size-second;
+        margin-top: $size-third;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
