@@ -2,7 +2,7 @@
 
 
 .nav-top {
-    background-color: rgba(48, 94, 54, 0.7);
+    background-color: rgba(48, 94, 54, 0.9);
     position: fixed;
     top: 0;
     left:0;
@@ -24,13 +24,14 @@
     display: inline; 
 }
 
+
 .nav-top ul li a {
     color: $tertiary-color;
     text-decoration: none;
     display: none;
     padding: 2em;
-
 }
+
 
 .nav-top #nav-drop ul li a {
  display: block;
@@ -38,7 +39,7 @@
 
 
 #nav-drop {
-    background-color: $primary-color;
+    background-color: rgba(48, 94, 54, 0.9);
     text-decoration: none;
     top:0;
     position: fixed;
@@ -46,9 +47,11 @@
     right: 0;
 }
 
+
 .nav-topnav-drop img {
     display: none;
 }
+
 
 #nav-drop ul {
     list-style-type: none;
@@ -57,21 +60,24 @@
     padding-top: 1em;
 }
 
+
 #nav-drop ul li {
     padding-bottom: 0.1em;
     padding-top: 2em;
 }
 
+
 #nav-drop ul li a {
     font-family: $font-second;
 text-decoration: none;
 color: $tertiary-color;
-
 }
+
 
 #nav-drop ul li a:hover {
  color: $secondary-color;
 }
+
 
 .nav-top #nav-drop, #hamburger-menu, #ham-menu {
 position: absolute;
@@ -91,12 +97,13 @@ font-size: 1.5em;
 }
 
 
-
-/*==========================  ID =============================*/
-
 #hamburger-menu  {
     display:block;
 }
+
+
+/*====================================================================*/
+
 
 @media screen and (min-width: 700px) {
 
@@ -112,51 +119,3 @@ font-size: 1.5em;
     background-color: transparent;
 }
 }
-
-
-
-
-
-
-/**
-        nav {
-            background-color: $quaternary-color;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            li {
-                display: inline;
-                a {
-                display: inline-block;
-                padding: 1em;
-                color: $primary-color;
-                text-decoration: none;
-                } & :hover {
-                background-color: $senary-color;
-                }
-            }
-            }
-        }
-
-
-
-        <script>
-        function navToggle() {
-              var x = document.getElementById("nav-drop");
-    
-              if (x.className === "nav-top") {
-                  x.className += " drop";
-              } else {
-                  x.className = "nav-top";
-              }
-          }
-        </script>
-        */

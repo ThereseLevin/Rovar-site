@@ -7,7 +7,7 @@
 /* Font sizes */
 /* - - - - NAVBAR - - - - */
 .nav-top {
-  background-color: rgba(48, 94, 54, 0.7);
+  background-color: rgba(48, 94, 54, 0.9);
   position: fixed;
   top: 0;
   left: 0;
@@ -32,7 +32,7 @@
   display: block; }
 
 #nav-drop {
-  background-color: #305e36;
+  background-color: rgba(48, 94, 54, 0.9);
   text-decoration: none;
   top: 0;
   position: fixed;
@@ -74,10 +74,10 @@
   padding-bottom: 1em;
   float: left; }
 
-/*==========================  ID =============================*/
 #hamburger-menu {
   display: block; }
 
+/*====================================================================*/
 @media screen and (min-width: 700px) {
   #hamburger-menu {
     display: none; }
@@ -86,46 +86,4 @@
   .nav-top {
     background-color: transparent; } }
 
-/**
-        nav {
-            background-color: $quaternary-color;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            li {
-                display: inline;
-                a {
-                display: inline-block;
-                padding: 1em;
-                color: $primary-color;
-                text-decoration: none;
-                } & :hover {
-                background-color: $senary-color;
-                }
-            }
-            }
-        }
-
-
-
-        <script>
-        function navToggle() {
-              var x = document.getElementById("nav-drop");
-    
-              if (x.className === "nav-top") {
-                  x.className += " drop";
-              } else {
-                  x.className = "nav-top";
-              }
-          }
-        </script>
-        */
 /* - - - - MAIN - - - - */
