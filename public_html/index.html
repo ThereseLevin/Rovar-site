@@ -21,14 +21,28 @@
         </header>
         
         <main>
-            <form>
-                <input type="text" name="name" value="Skriv in ditt namn här">
-                <br>
-                <button onclick="getFormData()" id="clickButton">Översätt</button>
-            </form> 
-
-            <p id="outputtext"><!-- Här kommer namnet från js --></p>
-            <h2 id="check"><!-- Tester --></h2>
+            <div class="section-1">
+                    <h1>Rövarnamn</h1>
+                    <div class="section-1-2">
+                        <div class="section-1-2-1">
+                            <h2>Ta reda på ditt rövarnamn!</h2>
+                        </div>
+                        <div class="section-1-2-2">
+                                <form>
+                                <input type="text" name="name" value="Ditt namn">
+                                <br>
+                                <button onclick="getFormData()" id="clickButton">Översätt</button>
+                                </form> 
+                        </div> <!--section-1-2-2 -->
+                    </div> <!-- / .section-1-2 -->
+            </div> <!--/ .section-1-->
+            <div class="section-2">
+                <div class="section-2-1">
+                        <p id="outputtext"><!-- Här kommer namnet från js --></p>
+                        <h2 id="check"><!-- Tester --></h2>
+                </div>
+            </div>
+            
         </main>
 
         <footer>
