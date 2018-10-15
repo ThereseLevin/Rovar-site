@@ -1,7 +1,7 @@
 /* - - - - MAIN - - - - */
 
 body {
-    background-image: url("../media/images/forest.jpeg");
+    background-image: url("../images/forest.jpeg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -134,7 +134,7 @@ button:hover {
 }
 
 #outputtext {
-    font-family: $font-main;
+    font-family: $font-second;
     color: $tertiary-color;
     font-size: $size-third;
 }
