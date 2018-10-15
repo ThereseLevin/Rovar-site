@@ -31,7 +31,7 @@ function getFormData(){
     // Split() är en metod som delar upp en sträng till en array genom att göra strängen till "substrings". Med den specifika '' (seperatorn) för att bestäma var den ska dela 
     let nameArray = formData.split('');
 
-    // En for of-loop som ska gå genom input-namnet och göra alla bokstäver till små,  
+    /* En for of-loop som ska gå genom input-namnet(array) och göra alla bokstäver till små, lägga till i den tomma variabeln sig själv, kolla om det är en konsonan, är det inte strunta i det och lägg bara till en gång och gå tillbaka till toppen av loopen, OM det är en konsonant, lägg till den, lägg till ett "o" och lägg sedan till sig själv igen. Börja om från början. */  
     // The for...of statement creates a loop iterating over iterable objects
     // https://alligator.io/js/for-of-for-in-loops/
     // ex for (let char of str) {
@@ -40,6 +40,7 @@ function getFormData(){
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
     //for in i detta fallet hade blivit 1234456..
 
+    // En bokstav i taget?
     for (let characterLetter of nameArray) {
         //gör en idx var, med arryn med namnet, och kolla index nummret med konsonanterna
         let idx = nameArray.indexOf(consonants);
@@ -68,10 +69,11 @@ document.querySelector('#outputtext').innerHTML = newName;
 
 /* Metoden preventDefault () avbryter (händelsen), standardåtgärden som hör till händelsen inte kommer att köras. */
 /* Ex klicka på "Skicka" -knappen, förhindra att den skickar in ett formulär, eller på en länk - inte följa webbadressen */
-
 event.preventDefault();
+
 return formData;
 return newName;
+
 };
 
 // Slut på funktion
