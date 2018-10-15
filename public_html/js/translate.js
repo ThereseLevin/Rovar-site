@@ -16,7 +16,7 @@
 // Vokaler A, e, i, o, u, y, å, ä och ö.
 // Konsonanter B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, X, Z.
 
-//Variabel med en array med alla konsonanter som vi ska kolla efter i namnet.
+// Variabel med en array med alla konsonanter som vi ska kolla efter i namnet.
 const consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z'];
 
 // Skapar funktionen getFormData som hämtar det inskrivna namnet, kollar efter konsonaterna, stoppar in 'o' på de platser där konsonanter finns och lägger sen till samma konsonant igen. Sedan skriver funktionen ut namnet i HTML dokumentet. Tar även bort default beteendet hos form/submit. Körs vid click på button i HTML filen.
@@ -24,15 +24,21 @@ function getFormData(){
     //Ny tom variabel där vi ska stoppa det nya namnet
     let newName = '';
 
+    // QuerySelector = Hämtar första elementet i dokumentet som matchar "selectorn" -> 'input'
     // Skapar variablen formData. Hämtar värde från formulär
     let formData = document.querySelector('input').value;
 
-    //Ny variabel som innehåller formData, fast som en array med "," mellan varje bokstav
+    // Ny variabel som innehåller formData, fast som en array med "," mellan varje bokstav
+    // Split() är en metod som delar upp en sträng till en array genom att göra strängen till "substrings". Med den specifika '' (seperatorn) för att bestäma var den ska dela 
     let nameArray = formData.split('');
 
-    // En for of-loop som ska gå genom input-namnet och dela upp ordet. (ex N,a,m,n)
-    //char() = Converts a primitive datatype or array to a numeric character representation.
-    //The for...of statement creates a loop iterating over iterable objects
+    // En for of-loop som ska gå genom input-namnet och göra alla bokstäver till små,  
+    // char() = Gör om en datatyp eller array till nummer
+    // The for...of statement creates a loop iterating over iterable objects
+    //https://alligator.io/js/for-of-for-in-loops/
+    // ex for (let char of str) {
+                //console.log(char.toUpperCase().repeat(3));
+               // }
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
     for ( char of nameArray) {
         //gör en idx var, med arryn med namnet, och kolla index nummret med konsonanterna
