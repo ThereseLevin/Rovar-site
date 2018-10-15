@@ -1,0 +1,28 @@
+/* - - - - MEDIAQUERIES - - - - */
+
+@media only screen and (min-width: 700px) {
+    .all .section-1 {
+        width: 50%;
+    }
+
+    .all .section-2 {
+        width: 20em;
+    }
+
+    footer {
+        margin-top: 3em;
+    }
+
+    #hamburger-menu {
+        display: none;
+    }
+
+    .nav-top ul li a {
+        display: inline-block;
+    }
+
+    .nav-top {
+        background-color: transparent;
+    }
+
+}

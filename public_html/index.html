@@ -3,60 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Translate your name to robberlanguage">
+	<meta name="keywords" content="Robberlanguage, translate">
+	<meta name="author" content="Therese, Sandra, Rebecka">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <script src="js/translate.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <title>Rövarnamn</title>
 </head>
 <body>
-    <div class="all">
-        <header> 
-            <nav class="topnav" id="myTopnav">
-                    <img  class="img-fluid logo-1" src="images/logo.jpg" alt="An illustration of an squirrel and shield">
-                    <ul>
-                            <li><a href="hem">Hem</a></li>
-                            <li><a href="om-rovar-spraket">Om Rövarspråket</a></li>
-                    </ul>
-            </nav>
-        </header>
-        <main>
-                <div class="paperwall wrapper">
-                    <div class="grid-item">
-                        <div class="text-paperwall">  
-                        
-                            <h2>Om Rövarspråket</h2>
-                            <p>”Kok-a-lol-a-sos-fof-i-non-tot”, sjöng Eva-Lotta Lisander i Astrid Lindgrens romaner om Kalle Blomkvist. För den som växte upp med rövarspråket betyder det förstås ”kalasfint”. I och med Blomkvist-böckernas, och sedermera filmernas, popularitet spreds kodspråket i Sverige i en rasande fart under femtio- och sextiotalet. Fortfarande på tvåtusentalet kan många tala rövarspråket, även om inte fullt lika många kan förstå det när det talas snabbt.
-                            
-                            <h3>Struktur</h3>
+	<!--Fb dela knapp-->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = 'https://connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v3.1';
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<div class="all">
+		<header> 
+			<nav class="nav-top" id="nav-drop">
+				<ul> 
+					<li><img  class="img-fluid" src="images/squirrel.png" alt="An illustration of an squirrel and shield"></li>
+					<li><a href="index.html">Hem</a></li>
+					<li><a href="#sec">Om Rövarspråket</a></li> 
+					<li><a href="javascript:void(0)" id="hamburger-menu" onclick="navToggle()"><i class="fas fa-bars" id="ham-menu"></i></a></li> 
+				</ul>
+			</nav>
+		</header>
+			
+		<main>
+			<div class="section-1">
+				<h1>Rövarnamn</h1>
+				<div class="section-1-2">
+					<div class="section-1-2-1">
+						<h2>Ta reda på ditt rövarnamn!</h2>
+					</div>
+					<div class="section-1-2-2">
+						<form>
+						<input type="text" name="name" placeholder="Ditt namn" maxlength="20">
+						<br>
+						<button id="clickButton" onclick="getFormData()">Översätt</button>
+						</form> 
+					</div> <!--section-1-2-2 -->
+				</div> <!-- / .section-1-2 -->
+			</div> <!--/ .section-1-->
 
-                            <p>Har man väl förstått regeln för språket och tränat lite, kommer det väldigt enkelt. Vad som är avgörande för inlärandet är dock att man kan särskilja vokaler och konsonanter från varandra. En enkel regel är att vokaler kan man sjunga på, medan konsonanter är kortare ljud. Dessa bokstäver är vokaler: A, e, i, o, u, y, å, ä och ö. Därmed är alltså följande bokstäver konsonanter: b, c, d, f, g, h, j, k, l, m, n, p, q, r, s, t, v, x och z.
-                            Nu när du vet vilka bokstäver som är vokaler och vilka som är konsonanter, sätter du bara ett kort ”o” efter varje konsonant, följt av samma konsonant igen. ”S” blir med andra ord ”sos”, på samma sätt som ”l” blir ”lol” och ”j” blir ”joj”. Vokalerna uttalar man precis som vanligt.
-                            För att träna upp sig kan man börja med att uttala kortare ord, så som ”hej” (hoh-e-joj), eller ”klar” (kok-lol-a-ror). Att se någon av Kalle Blomkvist-filmerna är också ett roligt sätt att vänja sig vid språkets struktur.
-                            Vem vet när man behöver ett kodspråk nästa gång?</p>
-                            
-                            <h3>Överkurs</h3>
-                                    
-                            <p>”C” och ”H” är båda bokstäver som är svåra att urskilja när man lyssnar på rövarspråket. För att göra det lite lättare skrivs ibland ”H” som ”hot” och ”C” anpassar man efter det ljud c:et skulle ha i sammanhanget. ”Citron” uttalar man som ”sos-i-tot-ror-o-non”, till exempel, men ”knacka” uttalar man som ”kok-non-a-kok-kok-a”
-                            När man väl behärskar rövarspråket kan det vara intressant att gå vidare till Fikonspråket. Det förekommer också i Kalle Blomkvists värld, och är aningen svårare.</p>
-                                    
+			<div class="section-2">
+				<div class="section-2-1" id="sec">
+						<h3>Ditt rövarnamn är:</h3>
+						<p id="outputtext" class="wrapper-2"><!-- Här kommer namnet från js --></p>
+						<!-- Fb dela knappen -->
+						<div class="fb-share-button" data-href="http://levin.my.nu/" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flevin.my.nu%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Dela</a></div>
+				</div>
+			</div>
+				
+			<div class="paperwall wrapper">
+				<div class="grid-item">
+					<div class="text-paperwall">  
+						<h2>Om Rövarspråket</h2>
+						<p>”Kok-a-lol-a-sos-fof-i-non-tot”, sjöng Eva-Lotta Lisander i Astrid Lindgrens romaner om Kalle Blomkvist. För den som växte upp med rövarspråket betyder det förstås ”kalasfint”. I och med Blomkvist-böckernas, och sedermera filmernas, popularitet spreds kodspråket i Sverige i en rasande fart under femtio- och sextiotalet. Fortfarande på tvåtusentalet kan många tala rövarspråket, även om inte fullt lika många kan förstå det när det talas snabbt.
+						
+						<h3>Struktur</h3>
 
-                            <a href="http://www.rövarspråket.se/om/">Källa</a>
-                            <br>
-                            <div id="treasure">
-                                <img src="images/treasure.png" alt="a treasurechest">
-                            </div>
-                        </div>       
-                    </div>
-                </div>
+						<p>Har man väl förstått regeln för språket och tränat lite, kommer det väldigt enkelt. Vad som är avgörande för inlärandet är dock att man kan särskilja vokaler och konsonanter från varandra. En enkel regel är att vokaler kan man sjunga på, medan konsonanter är kortare ljud. Dessa bokstäver är vokaler: A, e, i, o, u, y, å, ä och ö. Därmed är alltså följande bokstäver konsonanter: b, c, d, f, g, h, j, k, l, m, n, p, q, r, s, t, v, x och z.
+						Nu när du vet vilka bokstäver som är vokaler och vilka som är konsonanter, sätter du bara ett kort ”o” efter varje konsonant, följt av samma konsonant igen. ”S” blir med andra ord ”sos”, på samma sätt som ”l” blir ”lol” och ”j” blir ”joj”. Vokalerna uttalar man precis som vanligt.
+						För att träna upp sig kan man börja med att uttala kortare ord, så som ”hej” (hoh-e-joj), eller ”klar” (kok-lol-a-ror). Att se någon av Kalle Blomkvist-filmerna är också ett roligt sätt att vänja sig vid språkets struktur.
+						Vem vet när man behöver ett kodspråk nästa gång?</p>
+						
+						<h3>Överkurs</h3>
+										
+						<p>”C” och ”H” är båda bokstäver som är svåra att urskilja när man lyssnar på rövarspråket. För att göra det lite lättare skrivs ibland ”H” som ”hot” och ”C” anpassar man efter det ljud c:et skulle ha i sammanhanget. ”Citron” uttalar man som ”sos-i-tot-ror-o-non”, till exempel, men ”knacka” uttalar man som ”kok-non-a-kok-kok-a”
+						När man väl behärskar rövarspråket kan det vara intressant att gå vidare till Fikonspråket. Det förekommer också i Kalle Blomkvists värld, och är aningen svårare.</p>
+										
 
+						<a href="http://www.rövarspråket.se/om/" id="source">Källa</a>
+						<br>
+						<div id="treasure">
+								<img src="images/treasure.png" alt="a treasurechest">
+						</div>
+					</div>       
+				</div>
+			</div>
+		</main>
 
-        </main>
-        <footer>
-            <small>SoSanondodrora, ToThoheroresose & RoRebobecockoka</small>
-            <i class="material-icons">cloud_queue</i>
-        </footer>
-    </div>
+			<footer>
+				<small>SoSanondodrora, ToThoheroresose & RoRebobecockoka</small>
+				<i class="material-icons">cloud_queue</i>
+			</footer>
+	</div>
 
+	<script>
+	function navToggle() {
+			var x = document.getElementById("nav-drop");
+			if (x.className === "nav-top") {
+					x.className += "nav-drop";
+			} else {
+					x.className = "nav-top";
+			}
+		}
+	</script>
 </body>
 </html>

@@ -1,9 +1,98 @@
 /* - - - - MAIN - - - - */
 
-.container {
-  
-
+body {
+    background-image: url("../media/images/forest.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
+
+.wrapper {
+    max-width: 600px;
+}
+
+.wrapper-2 {
+    overflow-wrap: break-word;
+    max-width: 300px;
+}
+
+.all {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+    .section-1 {
+        width: 90%;
+        margin: auto;
+        margin-top: 8em;
+        text-align: center;
+        h1 {
+            font-family: $font-main;
+            font-size: $size-main-2;
+            text-shadow: $shadow;
+            color: $tertiary-color;
+        }
+    }
+    .section-1-2 {
+        width: 90%;
+        margin: auto;
+        background-color: $transparent;
+        text-align: center;
+        padding-top: $size-third;
+        padding-bottom: $size-third;
+        margin-top: $size-third;
+        
+        h2 {
+            font-family: $font-second;
+        }
+        form, p, input{
+            font-family: $font-third;
+        }
+        
+    }
+
+    h3 {
+        font-family: $font-second;
+    }
+
+    .section-2 {
+        margin: auto;
+        width: 20em;
+        border-radius: 50%;
+        background-color: $transparent;
+        text-align: center;
+        padding-top: $size-second;
+        padding-bottom: $size-second;
+        margin-top: $size-third;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10em;
+        margin-bottom: $size-second;
+        margin-top: $size-second;
+    }
+
+    .section-2-1 h3, p{
+        font-family: $font-third;
+    }
+}
+
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    border-radius: 5px;
+}
+
+
+button {
+    padding: 10px 15px; 
+    background-color: $primary-color; 
+    cursor: pointer;
+    border-radius: 5px; 
+    color: $quinary-color;
+    margin-top: $size-third;
+}
+
 
 .paperwall {
     background-color: #CE9A3A;
@@ -15,11 +104,13 @@
         width: 80%;
         margin: auto;
         padding-top: 1em;
-       
+       h2 {
+           font-family: $font-second;
+       }
     }
 }
 
-    .grid-item {
+.grid-item {
 
     h2, h3 {
         text-align: center;
@@ -33,5 +124,23 @@
     text-align: center;
     img {
         width: 10em;
+        margin-bottom: 2em;
     }
 }
+button:hover {
+    background-color: $tertiary-color;
+
+}
+
+#outputtext {
+    font-family: $font-main;
+    color: $tertiary-color;
+    font-size: $size-third;
+}
+
+#source {
+    text-decoration: none;
+    color: $primary-color;
+    font-family: $font-third;
+}
+
