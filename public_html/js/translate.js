@@ -21,7 +21,7 @@ const consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s',
 // Skapar funktionen getFormData som hämtar det inskrivna namnet, kollar efter konsonaterna, stoppar in 'o' på de platser där konsonanter finns och lägger sen till samma konsonant igen. Sedan skriver funktionen ut namnet i HTML dokumentet. Tar även bort default beteendet hos form/submit. Körs vid click på button i HTML filen.
 function getFormData(){
     //Ny tom variabel där vi ska stoppa det nya namnet
-    let newName = '';
+    let newName = "";
 
     // QuerySelector = Hämtar första elementet i dokumentet som matchar "selectorn" -> 'input'
     // Skapar variablen formData. Hämtar värde från formulär
@@ -31,7 +31,7 @@ function getFormData(){
     // Split() är en metod som delar upp en sträng till en array genom att göra strängen till "substrings". Med den specifika '' (seperatorn) för att bestäma var den ska dela 
     let nameArray = formData.split('');
 
-    /* En for of-loop som ska gå genom input-namnet(array) och göra alla bokstäver till små, lägga till i den tomma variabeln sig själv, kolla om det är en konsonan, är det inte strunta i det och lägg bara till en gång och gå tillbaka till toppen av loopen, OM det är en konsonant, lägg till den, lägg till ett "o" och lägg sedan till sig själv igen. Börja om från början. */  
+    /* En for of-loop som ska gå genom input-namnet(array) och göra alla bokstäver till små, lägga till i den tomma variabeln sig själv, kolla om det är en konsonant, är det inte strunta i det och lägg bara till en gång och gå tillbaka till toppen av loopen, OM det är en konsonant, lägg till den, lägg till ett "o" och lägg sedan till sig själv igen. Börja om från början. */  
     // The for...of statement creates a loop iterating over iterable objects
     // https://alligator.io/js/for-of-for-in-loops/
     // ex for (let char of str) {
@@ -40,26 +40,19 @@ function getFormData(){
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
     //for in i detta fallet hade blivit 1234456..
 
-    // En bokstav i taget?
-    for (let characterLetter of nameArray) {
-        //gör en idx var, med arryn med namnet, och kolla index nummret med konsonanterna
-        let idx = nameArray.indexOf(consonants);
-
-        //Ny variabel för att använda oss av variabeln 
-        //Vid varje iteration tilldelas ett värde av en annan egenskap till variabeln.
-        let character = characterLetter;
-        
+    // En bokstav i taget
+    for (let letter of nameArray) { 
         //Gör stringen i variabeln till små bokstäver
-        character.toLowerCase();
+        letter.toLowerCase();
 
         /* Lägg till det nya namnet(värdet)(bokstäverna) i den tomma variabeln vi skapade tidigare (lägger till)(ändrar ej) */
-        newName += character;
+        newName += letter;
 
-        //Kolla nu OM något från arrayn consonants finns i characterNumber(toLowerCase)
-
-        if (consonants.includes(character.toLowerCase())) {
-            /* OCH OM det finns, lägg till i bokstäverna i newName + "o" ocg den bokstaven vi precis hittade i arrayn, men här vill vi att det ska börja med stor bokstav igen, för om namnet börjar med stor bokstav, vill vi att den ska göra det två gånger */
-            newName += "o" + character;
+        // Kolla nu OM 
+        // letter (bokstaven)(små bokstäver) 
+          
+        if (consonants.indexOf(letter.toLowerCase()) != -1) {
+            newName += "o" + letter;
         }
 
         /* Börja om från början av for of loopen och kolla om det finns fler konsonanter, gör detta tills att bokstäverna tar slut. När strängen är slut och newName har byggts på med ett nytt värde -> skriv ut detta i <p id="outputtext"> */
@@ -69,16 +62,25 @@ document.querySelector('#outputtext').innerHTML = newName;
 
 /* Metoden preventDefault () avbryter (händelsen), standardåtgärden som hör till händelsen inte kommer att köras. */
 /* Ex klicka på "Skicka" -knappen, förhindra att den skickar in ett formulär, eller på en länk - inte följa webbadressen */
-event.preventDefault();
 
-return formData;
-return newName;
+document.querySelector('form').addEventListener("click", function(event){
+      event.preventDefault()
+ }, false);
 
 };
 
 // Slut på funktion
 
+
 // KOMMENTARER OCH TESTER
+
+ // if (consonants.indexOf(letter.toLowerCase())) {
+        //     /* OCH OM det finns, lägg till i bokstäverna i newName + "o" ocg den bokstaven vi precis hittade i arrayn, men här vill vi att det ska börja med stor bokstav igen, för om namnet börjar med stor bokstav, vill vi att den ska göra det två gånger */
+        //     newName += "o" + letter;
+        // }
+
+
+//event.preventDefault();
 
 // char() = Gör om en datatyp eller array till nummer
 
