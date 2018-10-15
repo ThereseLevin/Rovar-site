@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<meta name="description" content="Translate your name to robberlanguage">
-		<meta name="keywords" content="Robberlanguage, translate">
-		<meta name="author" content="Therese, Sandra, Rebecka">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Translate your name to robberlanguage">
+	<meta name="keywords" content="Robberlanguage, translate">
+	<meta name="author" content="Therese, Sandra, Rebecka">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/translate.js" defer></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,6 +14,15 @@
     <title>Rövarnamn</title>
 </head>
 <body>
+	<!--Fb dela knapp-->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = 'https://connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v3.1';
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<div class="all">
 		<header> 
 			<nav class="nav-top" id="nav-drop">
@@ -35,9 +44,9 @@
 					</div>
 					<div class="section-1-2-2">
 						<form>
-						<input type="text" name="name" value="Ditt namn" maxlength="20">
+						<input type="text" name="name" placeholder="Ditt namn" maxlength="20">
 						<br>
-						<button id ="clickButton" onclick="getFormData()">Översätt</button>
+						<button id="clickButton" onclick="getFormData()">Översätt</button>
 						</form> 
 					</div> <!--section-1-2-2 -->
 				</div> <!-- / .section-1-2 -->
@@ -47,6 +56,8 @@
 				<div class="section-2-1" id="sec">
 						<h3>Ditt rövarnamn är:</h3>
 						<p id="outputtext" class="wrapper-2"><!-- Här kommer namnet från js --></p>
+						<!-- Fb dela knappen -->
+						<div class="fb-share-button" data-href="http://robber.levin.my.nu/public_html/" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flevin.my.nu%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Dela</a></div>
 				</div>
 			</div>
 				
