@@ -16,7 +16,7 @@
 // Konsonanter B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, X, Z.
 
 // Variabel med en array med alla konsonanter som vi ska kolla efter i namnet.
-const consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z'];
+const CONSTANTS = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z'];
 
 // Skapar funktionen getFormData som hämtar det inskrivna namnet, kollar efter konsonaterna, stoppar in 'o' på de platser där konsonanter finns och lägger sen till samma konsonant igen. Sedan skriver funktionen ut namnet i HTML dokumentet. Tar även bort default beteendet hos form/submit. Körs vid click på button i HTML filen.
 function getFormData(){
@@ -51,7 +51,7 @@ function getFormData(){
         // Kolla nu OM 
         // letter (bokstaven)(små bokstäver) 
           
-        if (consonants.indexOf(letter.toLowerCase()) != -1) {
+        if (CONSTANTS.indexOf(letter.toLowerCase()) != -1) {
             newName += "o" + letter;
         }
 
